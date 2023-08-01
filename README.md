@@ -8,4 +8,5 @@
 - กำหนด structured log และ message
 - add requestId to log json
 - config write log to file and rotation
-- Marker ใช้ทำอะไร?
+- Marker ใช้ทำอะไร? 
+- marking password
