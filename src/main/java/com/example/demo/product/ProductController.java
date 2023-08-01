@@ -22,6 +22,8 @@ public class ProductController {
         log.debug("list product");
 
         List<Product> products = productService.findProducts();
+
+        log.info("Found {} product(s), {}",products.size(),products);
         return ResponseEntity.ok(products);
     }
 }

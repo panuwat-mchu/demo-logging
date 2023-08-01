@@ -4,13 +4,27 @@
         <Property name="PID">????</Property>
         <Property name="LOG_PATTERN">!!! %clr{%d{yyyy-MM-dd HH:mm:ss.SSS}}{faint} %clr{%5p} %clr{${sys:PID}}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n%xwEx</Property>
     </Properties>
-    <Appenders>
-        <Console name="Console" target="SYSTEM_OUT" follow="true">
-            <PatternLayout pattern="${LOG_PATTERN}"/>
-        </Console>
-    </Appenders>
+<!--    <Appenders>-->
+<!--        <Console name="Console" target="SYSTEM_OUT" follow="true">-->
+<!--            <PatternLayout pattern="${LOG_PATTERN}"/>-->
+<!--        </Console>-->
+<!--    </Appenders>-->
+<!--    <Appenders>-->
+<!--        <Console name="Console" target="SYSTEM_OUT" follow="true">-->
+<!--            <JsonLayout complete="false" compact="false" >-->
+<!--                <KeyValuePair key="@timestamp" value="$${date:yyyy-MM-dd'T'HH:mm:ss.SSSZ}" />-->
+<!--                <KeyValuePair key="requestId" value="requestIdValue" />-->
+<!--                <KeyValuePair key="myCustomField" value="myCustomValue" />-->
+<!--            </JsonLayout>-->
+<!--        </Console>-->
+<!--    </Appenders>-->
+        <Appenders>
+            <Console name="Console" target="SYSTEM_OUT" follow="true">
+                <JsonTemplateLayout eventTemplateUri="classpath:log-demo-layout.json"/>
+            </Console>
+        </Appenders>
     <Loggers>
-        <Logger name="com.javadevjournal" level="debug"  additivity="false">
+        <Logger name="com.example.demo" level="debug"  additivity="false">
             <AppenderRef ref="Console" />
         </Logger>
         <Root level="info">

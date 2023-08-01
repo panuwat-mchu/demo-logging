@@ -6,6 +6,7 @@ import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -19,7 +20,8 @@ public class ProductServiceImpl implements ProductService{
 
         log.debug(fruit,"find products");
 
-
-        return null;
+        List<Product> products = new ArrayList<>();
+        products.add(new Product("Product A"));
+        return products;
     }
 }
