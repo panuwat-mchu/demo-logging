@@ -1,0 +1,9 @@
+{
+  "@timestamp": "2023-08-01T18:10:00.032+0700",
+  "demo.version": "1.2.0",
+  "log.level": "INFO",
+  "message": "Found 1 product(s)",
+  "process.thread.name": "http-nio-8080-exec-1",
+  "log.logger": "com.example.demo.product.ProductController",
+  "meta": "[Product{name='Product A'}]"
+}

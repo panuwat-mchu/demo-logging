@@ -9,15 +9,6 @@
 <!--            <PatternLayout pattern="${LOG_PATTERN}"/>-->
 <!--        </Console>-->
 <!--    </Appenders>-->
-<!--    <Appenders>-->
-<!--        <Console name="Console" target="SYSTEM_OUT" follow="true">-->
-<!--            <JsonLayout complete="false" compact="false" >-->
-<!--                <KeyValuePair key="@timestamp" value="$${date:yyyy-MM-dd'T'HH:mm:ss.SSSZ}" />-->
-<!--                <KeyValuePair key="requestId" value="requestIdValue" />-->
-<!--                <KeyValuePair key="myCustomField" value="myCustomValue" />-->
-<!--            </JsonLayout>-->
-<!--        </Console>-->
-<!--    </Appenders>-->
         <Appenders>
             <Console name="Console" target="SYSTEM_OUT" follow="true">
                 <JsonTemplateLayout eventTemplateUri="classpath:log-demo-layout.json"/>
